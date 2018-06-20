@@ -1,8 +1,8 @@
-import pandas_datareader as pdr
+import pandas_datareader.data as pdr
 from datetime import datetime
 
 def get_single_quote(symbol,start_date, end_date):
-        data = pdr.get_data_yahoo(symbols = symbol, start = start_date, end = end_date)
+        data = pdr.DataReader(symbol, 'quandl', start_date, end_date)
         return data
 
 def get_multi_quote(symbol_list, start_date, end_date):
@@ -20,6 +20,6 @@ def write_to_csv(data_dict):
 start_date = datetime(2000,1,1)
 end_date = datetime.today()
 
-symbol_list = ['AAPL', 'GOOG', 'SPY', 'GLD']
+symbol_list = ['AAPL', 'GOOG']
 write_to_csv(get_multi_quote(symbol_list, start_date, end_date))
 
