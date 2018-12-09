@@ -48,11 +48,11 @@ def test_run():
 	# print "Maximum of each row:\n", a.min(axis=1)
 	# print "Mean of all elements:", a.mean()
 
-	a = np.array([9, 6, 2, 3, 12, 14, 7, 10], dtype=np.int32) # 32-bit integer array 
-	print "Array:", a 
-	# Find the maximum and its index in array 
-	print "Maximum value:", a.max() 
-	print "Index of max.:", get_max_index(a)	
+	# a = np.array([9, 6, 2, 3, 12, 14, 7, 10], dtype=np.int32) # 32-bit integer array 
+	# print "Array:", a 
+	# # Find the maximum and its index in array 
+	# print "Maximum value:", a.max() 
+	# print "Index of max.:", get_max_index(a)	
 
 
 if __name__ == '__main__':
