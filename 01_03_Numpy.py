@@ -9,7 +9,7 @@ def get_max_index(a):
 def test_run():
 	#List to 1-D array
 	# print np.array([2,3,4])
-	# print np.array([(2,3,4), (5,6,7)])
+	print np.array([(2,3,4), (5,6,7)])
 	
 	# Empty array
 	# print np.empty(5)
