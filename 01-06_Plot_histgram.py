@@ -11,7 +11,7 @@ def compute_daily_returns(df):
 def test_run():
 	# Read data
 	dates = pd.date_range('2009-01-01', '2012-12-31')
-	symbols = ['SPY']
+	symbols = ['SPY', 'AAPL']
 	df = get_data(symbols, dates)
 	plot_data(df)
 
@@ -20,7 +20,9 @@ def test_run():
 	plot_data(daily_returns, title="Daily Returns", ylabel="Daily returns")
 
 	# Plot a histogram
-	daily_returns.hist(bins=20)
+	daily_returns['SPY'].hist(bins=20)
+	daily_returns['AAPL'].hist(bins=20)
+
 	plt.show()
 
 
